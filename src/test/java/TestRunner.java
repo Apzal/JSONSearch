@@ -1,0 +1,17 @@
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+
+@CucumberOptions(
+        features = "src/test/java/features/",
+        glue="step_definitions",
+        plugin = {"html:target/cucumber-html-report.html"},
+        tags={"@positivescenario or @negativescenario"}
+
+
+)
+public class TestRunner {
+
+}
